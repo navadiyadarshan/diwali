@@ -1,0 +1,70 @@
+<html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!-- <meta content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"> -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Diwali From darshan</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <audio id="audio1" src=""></audio>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="diwali">
+              <h2>
+                <span style="--i:1">H</span>
+                <span style="--i:2">A</span>
+                <span style="--i:3">P</span>
+                <span style="--i:4">Y</span>
+                <span style="--i:5">Y</span>
+                <span style="--i:6; margin-left: 5vw;">D</span>
+                <span style="--i:7">I</span>
+                <span style="--i:8">W</span>
+                <span style="--i:9">A</span>
+                <span style="--i:10">L</span>
+                <span style="--i:11">I</span>
+              </h2>
+
+              <h3 class="darshan">
+                <span style="--i:3">B</span>
+                <span style="--i:4">Y</span>
+                <span style="--i:5"> </span>
+                <span style="--i:6; margin-left: 3vw;">D</span>
+                <span style="--i:7">A</span>
+                <span style="--i:8">R</span>
+                <span style="--i:9">S</span>
+                <span style="--i:10">H</span>
+                <span style="--i:11">A</span>
+                <span style="--i:12">N</span></h3>
+            </div>
+        </div> 
+    </body>
+
+  <script src="./script.js"></script>
+  <script>
+    const paramas = new URLSearchParams(window.location.search);
+    let name = "BY "+ paramas.get('name');
+    const h3 = document.querySelector('.darshan');
+      h3.innerHTML = '';
+      let i = 3;
+      if(paramas.get('name')== null){
+        name = "BY DARSHAN";
+      }
+      for(let char of name){
+        if(i == 6){
+          h3.innerHTML += `<span  style="--i:${i};margin-left: 3vw;">${char}</span>`;
+        }else{
+        h3.innerHTML += `<span  style="--i:${i}">${char}</span>`;
+        }
+        i++;
+      }
+  </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SSTV3E2PHX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-SSTV3E2PHX');
+</script>
+</html>
